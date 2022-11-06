@@ -4,27 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thaoquang0410/nodejs_blog.git"
+    "url": "git+https://github.com/thaoquang0410/web_mock_nodejs.git"
   },
-  "keywords": [
-    "blog",
-    "nodejs"
-  ],
-  "author": "thaotq",
+  "author": "thaoquang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thaoquang0410/nodejs_blog/issues"
+    "url": "https://github.com/thaoquang0410/web_mock_nodejs/issues"
   },
-  "homepage": "https://github.com/thaoquang0410/nodejs_blog#readme",
+  "homepage": "https://github.com/thaoquang0410/web_mock_nodejs#readme",
   "dependencies": {
-    "express": "^4.18.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "body-parser": "^1.20.1",
+    "config": "^3.3.8",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
   }
 }
