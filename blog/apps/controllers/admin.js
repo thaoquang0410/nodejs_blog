@@ -81,5 +81,25 @@ router.post("/signin", function(req, res){
     }
 })
 
+router.get("/post/new", function(req, res){
+    res.render("admin/post/new", {data: {error:false}})
+})
 
+router.post("/post/new", function(req, res){
+    var params = req.body
+
+    var now = new Date()
+    params.created_at = now
+    params.updated_at = now
+
+    var data = post_md.addPost(params)
+
+    data.then(function(result){
+        res.redirect("/admin")
+    }).catch(function(err){
+        var data = {error: "Could not insert post"}
+        res.render("admin/post/new", {data: data})
+    })
+    
+})
 module.exports = router;
