@@ -23,6 +23,11 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
+                    <% if(data && data.error){ %>
+                        <div id="login-alert" class="alert alert-danger col-sm-12">
+                            <%= data.error %>
+                        </div>
+                    <%}%>   
                     <form action="/admin/post/new" method="POST" role="form">
                         <div class="form-group">
                             <label for="">Title</label>
@@ -37,7 +42,7 @@
                             <input type="text" class="form-control" name="author" placeholder="Author">
                         </div>
 
-                        <input type="submit" value="Add" name="" class="btn btn-success">
+                        <input type="button" value="Add" name="" class="btn btn-success">
                     </form>
                 </div>
             </div>
